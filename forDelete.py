@@ -22,4 +22,4 @@ def delete_rows_below_line(input_file, output_file, line_number):
         print(f"An error occurred: {e}")
 
 # Example usage:
-delete_rows_below_line("data/pwlds_weak.csv", "data/pwlds_weak.csv", 100001)
+delete_rows_below_line("data/pwlds_very_weak.csv", "data/pwlds_very_weak.csv", 100001)
