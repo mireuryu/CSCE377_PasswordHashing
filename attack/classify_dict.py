@@ -2,6 +2,7 @@ import re
 
 weak_file = open("weak_100k.txt", "w")
 moderate_file = open("moderate_100k.txt", "w")
+strong_file = open("strong_100k.txt", "w")
 
 weak_count = moderate_count = strong_count = 0
 LIMIT = 100000  # 100k per category
@@ -29,12 +30,12 @@ def classify(password):
   return "moderate"
 
 
-with open("dictionary_1M.txt", "r", errors="ignore") as f:
+with open("dictionary.txt", "r", errors="ignore") as f:
   for line in f:
     pw = line.strip()
 
     if not pw:
-        continue
+      continue
 
     category = classify(pw)
 
@@ -46,13 +47,19 @@ with open("dictionary_1M.txt", "r", errors="ignore") as f:
       moderate_file.write(pw + "\n")
       moderate_count += 1
 
+    elif category == "strong" and strong_count < LIMIT:
+      strong_file.write(pw + "\n")
+      strong_count += 1
+
     # Stop early if we have all three files full
-    if weak_count >= LIMIT and moderate_count >= LIMIT:
+    if weak_count >= LIMIT and moderate_count >= LIMIT and strong_count >= LIMIT:
       break
 
 weak_file.close()
 moderate_file.close()
+strong_file.close()
 
 print("Done!")
 print("Weak:", weak_count)
 print("Moderate:", moderate_count)
+print("STrong:", strong_count)
