@@ -1,0 +1,22 @@
+Mireu Ryu
+
+MD5 Dictionary Attack
+Command: 
+hashcat -m 0 <database folder>/<dataset>.csv attack/<dictionary>.txt 
+
+Ex) run without cache
+
+hashcat -m 0 md5HashedData/md5_pwlds_very_weak.csv attack/dictionary.txt --potfile-disable
+hashcat -m 0 md5HashedData/md5_pwlds_weak.csv attack/dictionary.txt --potfile-disable
+hashcat -m 0 md5HashedData/md5_pwlds_average.csv attack/dictionary.txt --potfile-disable
+hashcat -m 0 md5HashedData/md5_pwlds_strong.csv attack/dictionary.txt --potfile-disable
+hashcat -m 0 md5HashedData/md5_pwlds_very_strong.csv attack/dictionary.txt --potfile-disable
+
+
+
+bcrypt Dictionary Attack
+Command:
+
+Ex)
+
+hashcat -m 3200 bcryptHashedData/bcrypt_very_strong.csv attack/dictionary.txt --force --backend-ignore-opencl
