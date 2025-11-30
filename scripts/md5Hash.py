@@ -8,7 +8,7 @@
 # EX) python scripts/md5Hash.py --in data/pwlds_weak.csv
 
 
-import csv, hashlib, argparse, os
+import csv, hashlib, argparse, os, time
 
 
 
@@ -17,6 +17,10 @@ def md5_hex(password: str) -> str:
 
 def process_file(inpath: str, outpath: str):
     read_count = 0
+
+    # ---- Start timing ----
+    t_start = time.perf_counter()
+
     with open(inpath, newline='', encoding='utf-8') as infile, \
          open(outpath, 'w', newline='', encoding='utf-8') as outfile:
 
@@ -35,7 +39,12 @@ def process_file(inpath: str, outpath: str):
             writer.writerow({'PasswordHash': h})
             read_count += 1
 
+    # ---- End timing ----
+    t_end = time.perf_counter()
+    elapsed_ms = (t_end - t_start) * 1000
+
     print(f"Processed {read_count} rows -> wrote {outpath}")
+    print(f"Time taken: {elapsed_ms:.3f} ms")
 
 
 def main():
