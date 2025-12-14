@@ -1,4 +1,4 @@
-# CECE377 – Password Hashing Evaluation
+# CSCE 377 – Password Hashing Evaluation
 
 ## Overview
 
