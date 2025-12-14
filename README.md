@@ -115,4 +115,4 @@ hashcat -m 0 md5HashedData/md5_pwlds_very_strong.csv attack/dictionary.txt --pot
 
 ## License / Disclaimer
 
-This project is for academic and educational use only. Do not use insecure hashing algorithms such as MD5 in production systems.
+This project is for academic and educational use only.
