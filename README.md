@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project investigates the security weaknesses of **fast hashing algorithms** when used for password storage. If an attacker gains access to hashed passwords, fast algorithms (such as MD5) allow millions of guesses per second, making large-scale password cracking feasible.
+This project investigates the security weaknesses of **fast hashing algorithms** when used for password storage. If an attacker gains access to hashed passwords, fast algorithms (such as MD5) allow millions of guesses per second, making large-scale password cracking feasible. 
 
 The experiment quantitatively compares **MD5** and **bcrypt** in terms of:
 
