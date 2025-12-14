@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""
-bcrypt_hash.py
 
-Usage:
-  python bcrypt_hash.py --input passwords.csv --output hashed.csv --rounds 10 --workers 4 --include-plaintext
+# Alaa Ismail
+# Takes an unhashed password .csv file as an input, and
+# outputs a csv file of the original password, strength level, 
+# bcrypt hash, rounds(cost factor), and hashing time (ms)
+# scripts/bcryptHash.py
+# How to run:
+# python3 scripts/bcryptHash.py --input passwords.csv --output hashed.csv --rounds 10 --workers 4 --include-plaintext
+# EX) python3 scripts/bcryptHash.py --input pwlds_weak.csv --output hashed_weak.csv --rounds 10 --workers 4 --include-plaintext
 
-Input CSV must contain: password, strength
-Output CSV: password, strength, bcrypt_hash,rounds,time_ms
-"""
 import argparse
 import csv
 import time

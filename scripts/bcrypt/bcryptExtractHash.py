@@ -1,8 +1,18 @@
+#!/usr/bin/env python3
+
+# Alaa Ismail
+# Extracts only the bcrypt hashes from the output of bcryptHash.py to use 
+# in the dictionary attack
+# scripts/bcryptExtractHash.py
+# How to run:
+# python3 scripts/bcryptExtractHash.py hashed.csv
+# EX) python3 scripts/bcryptExtractHash.py hashed_weak.csv
+
 import pandas as pd
 import glob
 import os
 
-folder = "/Users/alaaismail/Downloads/2025-2026/csce377/CECE377_PasswordHashing/bcryptHashResults"
+folder = "../../data"
 
 files = glob.glob(os.path.join(folder, "*.csv"))
 
