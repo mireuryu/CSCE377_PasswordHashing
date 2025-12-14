@@ -91,6 +91,15 @@ hashcat -m 0 md5HashedData/md5_pwlds_very_strong.csv attack/dictionary.txt --pot
 ```
 
 ---
+### 0. bcrypt
+
+### 1. Hash the Passwords
+
+
+### 2. Perform a Dictionary Attack (bcrypt)
+
+
+---
 
 ## Appendix
 
