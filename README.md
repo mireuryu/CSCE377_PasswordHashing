@@ -101,7 +101,8 @@ Follow the instructions in `bcryptHash.py` to generate hashed password files for
 Use the following Hashcat command to perform a dictionary attack against bcrypt-hashed passwords:
 
 ```bash
-hashcat -m 0 <database_folder>/<dataset>.csv attack/dictionary.txt
+hashcat -m 3200 -a 0 <database_folder>/<dataset>.csv attack/dictionary.txt \
+  --status --status-timer=10 --force --potfile-disable
 ```
 
 ### Example Commands (Without Cache)
