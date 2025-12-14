@@ -66,7 +66,7 @@ Each category contains **100,000 passwords**, derived from a public password dat
 
 ## How to Run
 
-### 0. MD5
+### MD5
 
 ### 1. Hash the Passwords
 
@@ -90,8 +90,7 @@ hashcat -m 0 md5HashedData/md5_pwlds_strong.csv attack/dictionary.txt --potfile-
 hashcat -m 0 md5HashedData/md5_pwlds_very_strong.csv attack/dictionary.txt --potfile-disable
 ```
 
----
-### 0. bcrypt
+### bcrypt
 
 ### 1. Hash the Passwords
 
