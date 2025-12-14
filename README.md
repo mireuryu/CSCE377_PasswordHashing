@@ -77,7 +77,7 @@ Follow the instructions in `md5hash.py` to generate hashed password files for ea
 Use the following Hashcat command to perform a dictionary attack against MD5-hashed passwords:
 
 ```bash
-hashcat -m 0 <database_folder>/<dataset>.csv attack/<dictionary>.txt
+hashcat -m 0 <database_folder>/<dataset>.csv attack/dictionary.txt
 ```
 
 ### Example Commands (Without Cache)
