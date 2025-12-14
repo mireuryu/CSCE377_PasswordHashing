@@ -94,9 +94,30 @@ hashcat -m 0 md5HashedData/md5_pwlds_very_strong.csv attack/dictionary.txt --pot
 
 ### 1. Hash the Passwords
 
+Follow the instructions in `bcryptHash.py` to generate hashed password files for each strength category.
 
 ### 2. Perform a Dictionary Attack (bcrypt)
 
+Use the following Hashcat command to perform a dictionary attack against bcrypt-hashed passwords:
+
+```bash
+hashcat -m 0 <database_folder>/<dataset>.csv attack/dictionary.txt
+```
+
+### Example Commands (Without Cache)
+
+```bash
+hashcat -m 3200 -a 0 data/hashed_very_weak_hashOnly.csv attack/dictionary.txt \
+  --status --status-timer=10 --force --potfile-disable
+hashcat -m 3200 -a 0 data/hashed_weak_hashOnly.csv attack/dictionary.txt \
+  --status --status-timer=10 --force --potfile-disable
+hashcat -m 3200 -a 0 data/hashed_average_hashOnly.csv attack/dictionary.txt \
+  --status --status-timer=10 --force --potfile-disable
+hashcat -m 3200 -a 0 data/hashed_strong_hashOnly.csv attack/dictionary.txt \
+  --status --status-timer=10 --force --potfile-disable
+hashcat -m 3200 -a 0 data/hashed_very_strong_hashOnly.csv attack/dictionary.txt \
+  --status --status-timer=10 --force --potfile-disable
+```
 
 ---
 
